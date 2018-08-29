@@ -1,6 +1,6 @@
 <template>
   <div  id="app">
-    <h1>Top 10 Crypto Currency</h1>
+    <h1>Top 10 Crypto Currencies</h1>
     <div id="crypto-container" v-for="(value,key) in cryptos">
       <span class="left">{{ key }}</span>
       <span class="right">{{ value.EUR }}€</span>
@@ -24,7 +24,6 @@ export default {
       )
       .then(response => {
         this.cryptos = response.data;
-        console.log(response);
       })
       .catch(e => {
         this.errors.push(e);
